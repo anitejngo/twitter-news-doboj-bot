@@ -2,7 +2,7 @@ name: Daily Doboj Joke
 
 on:
   schedule:
-    - cron: '45 23 * * *'  # 23:45 UTC = 15 minutes before midnight UTC
+    - cron: '45 * * * *'  # Runs at **:45 every hour (e.g., 1:45, 2:45, etc.)
   workflow_dispatch:  # Allow manual runs
 
 jobs:

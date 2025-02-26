@@ -2,7 +2,7 @@ name: Daily Doboj Joke
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Runs at **:45 every hour (e.g., 1:45, 2:45, etc.)
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
   workflow_dispatch:  # Allow manual runs
 
 jobs:
@@ -22,6 +22,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Log UTC time
+        run: |
+          echo "Current UTC time: $(date -u)"
 
       - name: Run Twitter bot
         env:

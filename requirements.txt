@@ -1,0 +1,5 @@
+requests
+tweepy==4.15.0
+python-dotenv
+openai==0.28.0
+
